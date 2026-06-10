@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useMemo, useState, useEffect } from "react";
+import Link from "next/link";
 import "./stats-and-gallery.css";
 
 const galleryItems = [
@@ -162,9 +163,9 @@ const StatsAndGallery = () => {
             <p className="text-sm text-muted-foreground">
               Ready to add your event to our gallery?
             </p>
-            <button className="mt-4 rounded-full bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90">
+            <Link href="/contact" className="mt-4 inline-block rounded-full bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90">
               Start Planning Your Event
-            </button>
+            </Link>
           </div>
         </div>
       </section>

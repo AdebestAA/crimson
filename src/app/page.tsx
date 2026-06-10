@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Hero from "@/components/layout/Hero";
 import StatsAndGallery from "@/components/landing-page/stats-and-gallery";
@@ -65,10 +66,10 @@ export default function Home() {
                 <div className="px-4 pb-2">
                   <h3 className="mt-5 font-serif text-2xl font-cormorant">{c.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground h-9">{c.blurb}</p>
-                  <a href="#" className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary transition group-hover:gap-2">
+                  <Link href="/services" className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary transition group-hover:gap-2">
                     Learn more{" "}
                     <motion.span animate={{ x: [0, 5, 0] }} transition={{ repeat: Infinity, duration: 1.2 }} aria-hidden>→</motion.span>
-                  </a>
+                  </Link>
                 </div>
               </motion.article>
             ))}
