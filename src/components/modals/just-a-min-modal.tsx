@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -59,15 +60,17 @@ export function JustAMinModal() {
   });
 
   const { mutate, isPending } = useQuickForm();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+    if (pathname.startsWith("/admin") || pathname.startsWith("/login")) return;
     const done = localStorage.getItem(STORAGE_KEY);
     if (!done) {
       const t = setTimeout(() => setOpen(true), 800);
       return () => clearTimeout(t);
     }
-  }, []);
+  }, [pathname]);
 
   const onSubmit = (values: FormValues) => {
     mutate(values, {

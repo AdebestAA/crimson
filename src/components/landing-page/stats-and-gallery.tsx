@@ -67,8 +67,12 @@ function distribute<T>(items: T[], columns: number): T[][] {
   return cols;
 }
 
+const filters = ["All", "Images", "Short clips"] as const;
+type Filter = (typeof filters)[number];
+
 const StatsAndGallery = () => {
   const [columns, setColumns] = useState(3);
+  const [filter, setFilter] = useState<Filter>("All");
 
   useEffect(() => {
     const update = () => setColumns(window.innerWidth >= 768 ? 3 : 2);
@@ -112,14 +116,17 @@ const StatsAndGallery = () => {
 
           {/* Filter pills */}
           <div className="mt-8 flex justify-center gap-2">
-            {["All", "Images", "Short clips"].map((f, i) => (
+            {filters.map((f) => (
               <button
                 key={f}
-                className={`rounded-full px-5 py-1.5 text-xs font-medium transition ${
-                  i === 0
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-muted text-muted-foreground hover:bg-muted/70"
-                }`}
+                onClick={() => {
+                  if (f === "Short clips") {
+                    alert("Video clips coming soon!");
+                    return;
+                  }
+                  setFilter(f);
+                }}
+                className={`rounded-full px-5 py-1.5 text-xs font-medium transition ${filter === f ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:bg-muted/70"}`}
               >
                 {f}
               </button>

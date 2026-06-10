@@ -100,39 +100,28 @@ export default function AdminPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="mx-auto max-w-7xl px-4 py-8">
-        <div className="mb-8 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-4 py-6 md:py-8">
+        <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="font-serif text-3xl font-bold">
+            <h1 className="font-serif text-2xl font-bold md:text-3xl">
               Admin <span className="text-primary">Dashboard</span>
             </h1>
-            <p className="mt-1 text-sm text-muted-foreground">
+            <p className="mt-1 text-xs text-muted-foreground md:text-sm">
               View all form submissions
             </p>
           </div>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => downloadPDF()}
-              disabled={!rows.length}
-              className="flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm transition hover:bg-muted disabled:opacity-40"
-            >
-              <Download className="h-4 w-4" />
-              PDF
+          <div className="flex items-center gap-1.5 md:gap-2">
+            <button onClick={() => downloadPDF()} disabled={!rows.length}
+              className="flex items-center gap-1.5 rounded-lg border border-border px-3 py-2 text-xs transition hover:bg-muted disabled:opacity-40 md:px-4 md:text-sm">
+              <Download className="h-3.5 w-3.5 md:h-4 md:w-4" /> PDF
             </button>
-            <button
-              onClick={() => refetch()}
-              disabled={isFetching}
-              className="flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm transition hover:bg-muted"
-            >
-              <RefreshCw className={`h-4 w-4 ${isFetching ? "animate-spin" : ""}`} />
-              Refresh
+            <button onClick={() => refetch()} disabled={isFetching}
+              className="flex items-center gap-1.5 rounded-lg border border-border px-3 py-2 text-xs transition hover:bg-muted md:px-4 md:text-sm">
+              <RefreshCw className={`h-3.5 w-3.5 md:h-4 md:w-4 ${isFetching ? "animate-spin" : ""}`} /> Refresh
             </button>
-            <button
-              onClick={handleLogout}
-              className="flex items-center gap-2 rounded-lg border border-red-500/30 px-4 py-2 text-sm text-red-500 transition hover:bg-red-500/10"
-            >
-              <LogOut className="h-4 w-4" />
-              Logout
+            <button onClick={handleLogout}
+              className="flex items-center gap-1.5 rounded-lg border border-red-500/30 px-3 py-2 text-xs text-red-500 transition hover:bg-red-500/10 md:px-4 md:text-sm">
+              <LogOut className="h-3.5 w-3.5 md:h-4 md:w-4" /> Logout
             </button>
           </div>
         </div>
