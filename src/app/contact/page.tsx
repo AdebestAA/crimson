@@ -1,6 +1,5 @@
 import Hero from "@/components/layout/Hero";
 import Footer from "@/components/layout/Footer";
-import { SectionOne } from "@/components/about/section-one";
 import { EventPlanningForm } from "@/components/contact/form-component";
 
 export default function AboutPage() {

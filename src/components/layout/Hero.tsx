@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Nav from "@/components/layout/Nav";
 
 const HERO_IMAGES = [
   "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1920&q=80",
   "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80",
 ];
 
 type HeroProps = {
@@ -23,15 +23,6 @@ type HeroProps = {
   ctaSecondaryHref?: string;
 };
 
-const heroItem = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.3 + i * 0.2, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const },
-  }),
-};
-
 export default function Hero({
   title,
   description,
@@ -41,18 +32,21 @@ export default function Hero({
   ctaPrimaryLabel = "Start Planning",
   ctaPrimaryHref = "/contact",
   ctaSecondaryLabel = "See Our Work",
-  ctaSecondaryHref = "#gallery",
+  ctaSecondaryHref = "/services",
 }: HeroProps) {
   const [imgIndex, setImgIndex] = useState(0);
 
   useEffect(() => {
-    const t = setInterval(() => setImgIndex((p) => (p + 1) % HERO_IMAGES.length), 6000);
+    const t = setInterval(
+      () => setImgIndex((p) => (p + 1) % HERO_IMAGES.length),
+      6000,
+    );
     return () => clearInterval(t);
   }, []);
 
   return (
-    <section className="relative min-h-[480px] w-full overflow-hidden md:min-h-[640px]">
-      {/* Background — instant swap, no flash */}
+    <section className="relative min-h-dvh w-full">
+      {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -60,80 +54,51 @@ export default function Hero({
         }}
       />
 
+      {/* Nav — fixed to top */}
       <div className="relative z-10">
         <Nav activeIndex={activeNavIndex} />
+      </div>
 
-        <motion.div
-          className="mx-auto flex max-w-4xl flex-col items-center px-4 pt-12 pb-16 text-center text-white md:px-6 md:pt-16 md:pb-24"
-          initial="hidden"
-          animate="visible"
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }}
-        >
+      {/* Hero content — centered in remaining space */}
+      <div className="relative z-10 flex items-center justify-center" style={{ minHeight: "calc(100dvh - 80px)" }}>
+        <div className="mx-auto flex max-w-4xl flex-col items-center px-4 py-12 text-center text-white md:px-6 md:py-16">
           {tagline && (
-            <motion.span
+            <span
+              data-aos="fade-down" data-aos-delay="300"
               className="mb-4 inline-block rounded-full border border-white/40 px-3 py-1 text-[10px] uppercase tracking-[0.25em] backdrop-blur-sm md:mb-6 md:px-4 md:text-xs"
-              variants={heroItem}
-              custom={0}
             >
               {tagline}
-            </motion.span>
+            </span>
           )}
 
-          <motion.h1
-            className="font-serif text-3xl leading-tight md:text-5xl lg:text-7xl"
-            variants={heroItem}
-            custom={1}
-          >
+          <h1 data-aos="fade-up" data-aos-delay="500" className="font-serif text-3xl leading-tight md:text-5xl lg:text-7xl">
             {title}
-          </motion.h1>
+          </h1>
 
           {description && (
-            <motion.p
-              className="mt-4 max-w-xl text-sm text-white/80 md:mt-6 md:text-lg"
-              variants={heroItem}
-              custom={2}
-            >
+            <p data-aos="fade-up" data-aos-delay="700" className="mt-4 max-w-xl text-sm text-white/80 md:mt-6 md:text-lg">
               {description}
-            </motion.p>
+            </p>
           )}
 
           {showCta && (
-            <motion.div
-              className="mt-6 flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row sm:justify-center sm:gap-4 md:mt-8"
-              variants={heroItem}
-              custom={3}
-            >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
-                <Link
-                  href={ctaPrimaryHref}
-                  className="block rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-colors hover:bg-primary-light"
-                >
-                  {ctaPrimaryLabel}
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
-                <Link
-                  href={ctaSecondaryHref}
-                  className="block rounded-full border border-white/50 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
-                >
-                  {ctaSecondaryLabel}
-                </Link>
-              </motion.div>
-            </motion.div>
+            <div data-aos="fade-up" data-aos-delay="900" className="mt-6 flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row sm:justify-center sm:gap-4 md:mt-8">
+              <Link href={ctaPrimaryHref} className="block rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:scale-105 hover:bg-primary-light">
+                {ctaPrimaryLabel}
+              </Link>
+              <Link href={ctaSecondaryHref} className="block rounded-full border border-white/50 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/20">
+                {ctaSecondaryLabel}
+              </Link>
+            </div>
           )}
-        </motion.div>
+        </div>
       </div>
 
       {/* Slide indicators */}
       <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
         {HERO_IMAGES.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setImgIndex(i)}
-            aria-label={`Slide ${i + 1}`}
-            className={`h-1.5 rounded-full transition-all duration-500 ${
-              i === imgIndex ? "w-8 bg-white" : "w-1.5 bg-white/40 hover:bg-white/60"
-            }`}
+          <button key={i} onClick={() => setImgIndex(i)} aria-label={`Slide ${i + 1}`}
+            className={`h-1.5 rounded-full transition-all duration-500 ${i === imgIndex ? "w-8 bg-white" : "w-1.5 bg-white/40 hover:bg-white/60"}`}
           />
         ))}
       </div>

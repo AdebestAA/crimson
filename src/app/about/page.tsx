@@ -1,7 +1,5 @@
 import Hero from "@/components/layout/Hero";
 import Footer from "@/components/layout/Footer";
-import { EventPlanningForm } from "@/components/contact/form-component";
-// src/components/AboutSection.tsx
 import {
   CalendarCheck,
   Lightbulb,
@@ -10,7 +8,6 @@ import {
   ClipboardList,
   Sparkles,
 } from "lucide-react";
-import aboutImage from "@/assets/about-memory-makers.jpg";
 import { DifferenceSection } from "@/components/contact/difference-section";
 
 const services = [

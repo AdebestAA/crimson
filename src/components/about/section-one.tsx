@@ -1,3 +1,5 @@
+import { ScrambleText } from "@/components/animations/scramble-text";
+
 export function SectionOne() {
   return (
     <>
@@ -9,8 +11,8 @@ export function SectionOne() {
               <span className="text-xs uppercase tracking-[0.3em] text-primary">
                 Our Story
               </span>
-              <h2 className="mt-3  text-4xl leading-tight font-cormorant">
-                Crafting Unforgettable Moments Since 2014
+              <h2 className="mt-3 text-4xl leading-tight font-cormorant">
+                <ScrambleText text="Crafting Unforgettable Moments Since 2014" />
               </h2>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
                 Crimson Events was born from a simple belief: every celebration
@@ -75,7 +77,7 @@ export function SectionOne() {
               What Drives Us
             </span>
             <h2 className="mt-3 font-serif text-4xl md:text-5xl font-cormorant">
-              Our Core Values
+              <ScrambleText text="Our Core Values" />
             </h2>
           </div>
           <div className="mt-14 grid gap-8 md:grid-cols-3">

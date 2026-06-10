@@ -1,4 +1,13 @@
-const navLinks = ["Home", "About", "Services", "Contact"];
+import Link from "next/link";
+import Image from "next/image";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
+];
+
 const services = [
   "Weddings",
   "Birthdays",
@@ -14,7 +23,13 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-2">
-            <img src="/assets/crimson-logo.png" alt="Crimson logo" />
+            <Image
+              src="/assets/crimson-logo.png"
+              alt="Crimson logo"
+              width={40}
+              height={40}
+              className="h-8 w-auto"
+            />
           </div>
           <p className="mt-4 max-w-xs text-sm italic">
             "Planning memories, one event at a time."
@@ -37,13 +52,13 @@ export default function Footer() {
           </h4>
           <ul className="mt-5 space-y-3 text-sm">
             {navLinks.map((l) => (
-              <li key={l}>
-                <a
-                  href={l === "Home" ? "/" : `/${l.toLowerCase()}`}
+              <li key={l.label}>
+                <Link
+                  href={l.href}
                   className="transition text-white hover:text-primary"
                 >
-                  {l}
-                </a>
+                  {l.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -54,13 +69,8 @@ export default function Footer() {
           </h4>
           <ul className="mt-5 space-y-3 text-sm">
             {services.map((s) => (
-              <li key={s}>
-                <a
-                  href="/services"
-                  className="transition text-white hover:text-primary"
-                >
-                  {s}
-                </a>
+              <li key={s} className="text-white">
+                {s}
               </li>
             ))}
           </ul>

@@ -158,7 +158,7 @@ export default function ServicesPage() {
         </motion.div>
 
         <div className="mx-auto max-w-6xl space-y-20 px-6">
-          {services.map((s, idx) => (
+          {services.map((s) => (
             <motion.div
               key={s.title}
               className="grid items-center gap-10 rounded-2xl p-6 md:grid-cols-2 md:p-10"

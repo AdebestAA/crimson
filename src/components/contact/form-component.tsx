@@ -4,11 +4,19 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { FaWhatsapp } from "react-icons/fa";
-import { Loader2 } from "lucide-react";
+import { Loader2, CalendarIcon } from "lucide-react";
+import { format } from "date-fns";
+import { cn } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import {
   Form,
   FormControl,
@@ -24,7 +32,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { toast } from "sonner";
 import { useContactForm } from "@/lib/api/use-contact-form";
 
 const eventTypes = [
@@ -112,7 +119,7 @@ export function EventPlanningForm() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-3xl rounded-2xl border border-border bg-card p-6 shadow-sm md:p-10">
+    <div className="mx-auto w-full max-w-3xl rounded-2xl lg:border-2 lg:border-border bg-card p-6 shadow-sm md:border md:p-10">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid gap-6 md:grid-cols-2">
@@ -125,7 +132,11 @@ export function EventPlanningForm() {
                     Full Name
                   </FormLabel>
                   <FormControl>
-                    <Input placeholder="Adaeze Okonkwo" {...field} />
+                    <Input
+                      className="h-10"
+                      placeholder="Adaeze Okonkwo"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -142,6 +153,7 @@ export function EventPlanningForm() {
                   </FormLabel>
                   <FormControl>
                     <Input
+                      className="h-10"
                       type="email"
                       placeholder="adaeze@gmail.com"
                       {...field}
@@ -162,6 +174,7 @@ export function EventPlanningForm() {
                   </FormLabel>
                   <FormControl>
                     <Input
+                      className="h-10"
                       type="tel"
                       placeholder="+234 813 821 0833"
                       {...field}
@@ -203,13 +216,40 @@ export function EventPlanningForm() {
               control={form.control}
               name="eventDate"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="flex flex-col">
                   <FormLabel className="text-xs font-semibold uppercase tracking-wider">
                     Event Date
                   </FormLabel>
-                  <FormControl>
-                    <Input type="date" {...field} />
-                  </FormControl>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <FormControl>
+                        <button
+                          type="button"
+                          className={cn(
+                            "flex h-10 w-full items-center justify-between gap-2 rounded-lg border border-input bg-transparent px-3 text-sm transition-colors hover:bg-muted/30",
+                            !field.value && "text-muted-foreground",
+                          )}
+                        >
+                          {field.value
+                            ? format(new Date(field.value), "PPP")
+                            : "Pick a date"}
+                          <CalendarIcon className="h-4 w-4 shrink-0 text-muted-foreground" />
+                        </button>
+                      </FormControl>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="start">
+                      <Calendar
+                        mode="single"
+                        selected={
+                          field.value ? new Date(field.value) : undefined
+                        }
+                        onSelect={(d) =>
+                          field.onChange(d ? d.toISOString() : "")
+                        }
+                        disabled={{ before: new Date() }}
+                      />
+                    </PopoverContent>
+                  </Popover>
                   <FormMessage />
                 </FormItem>
               )}
@@ -225,6 +265,7 @@ export function EventPlanningForm() {
                   </FormLabel>
                   <FormControl>
                     <Input
+                      className="h-10"
                       type="number"
                       min={1}
                       placeholder="e.g. 300"
@@ -293,7 +334,9 @@ export function EventPlanningForm() {
             disabled={isPending}
             className="h-12 w-full rounded-full bg-[oklch(0.45_0.18_25)] text-base font-semibold text-white hover:bg-[oklch(0.40_0.18_25)]"
           >
-            {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin inline" />}
+            {isPending && (
+              <Loader2 className="mr-2 h-4 w-4 animate-spin inline" />
+            )}
             {isPending ? "Sending..." : "Start Planning"}
           </Button>
 

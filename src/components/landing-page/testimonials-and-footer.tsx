@@ -1,19 +1,17 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { FaWhatsapp } from "react-icons/fa";
 import {
-  ChevronLeft,
-  ChevronRight,
-  Loader2,
-  Quote,
-  Phone,
-  Mail,
-  MapPin,
+  ChevronLeft, ChevronRight, Loader2, CalendarIcon,
+  Quote, Phone, Mail, MapPin,
 } from "lucide-react";
+import { format } from "date-fns";
+import { cn } from "@/lib/utils";
 import { useContactForm } from "@/lib/api/use-contact-form";
 
 import { Button } from "@/components/ui/button";
@@ -33,6 +31,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 const navLinks = ["Home", "About", "Services", "Contact"];
 const categories = [
@@ -134,7 +134,7 @@ function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="rounded-xl bg-background p-8 shadow-sm ring-1 ring-border"
+        className="rounded-xl bg-background p-8 shadow-sm ring-2 ring-border md:ring-1"
       >
         <div className="grid gap-4 md:grid-cols-2">
           <FormField
@@ -215,19 +215,27 @@ function ContactForm() {
               </FormItem>
             )}
           />
-          <FormField
-            control={form.control}
-            name="eventDate"
-            render={({ field }) => (
-              <FormItem>
+          <FormField control={form.control} name="eventDate" render={({ field }) => (
+              <FormItem className="flex flex-col">
                 <FormLabel className={labelClasses}>Event Date</FormLabel>
-                <FormControl>
-                  <Input className="h-10" type="date" {...field} />
-                </FormControl>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <FormControl>
+                      <button type="button" className={cn("flex h-10 w-full items-center justify-between gap-2 rounded-lg border border-input bg-transparent px-3 text-sm transition-colors hover:bg-muted/30", !field.value && "text-muted-foreground")}>
+                        {field.value ? format(new Date(field.value), "PPP") : "Pick a date"}
+                        <CalendarIcon className="h-4 w-4 shrink-0 text-muted-foreground" />
+                      </button>
+                    </FormControl>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0" align="start">
+                    <Calendar mode="single" selected={field.value ? new Date(field.value) : undefined}
+                      onSelect={(d) => field.onChange(d ? d.toISOString() : "")}
+                      disabled={{ before: new Date() }} />
+                  </PopoverContent>
+                </Popover>
                 <FormMessage />
               </FormItem>
-            )}
-          />
+            )} />
           <FormField
             control={form.control}
             name="guestCount"
@@ -461,16 +469,19 @@ const TestimonialsAndFooter = () => {
               Navigation
             </h4>
             <ul className="mt-5 space-y-3 text-sm">
-              {navLinks.map((l) => (
-                <li key={l}>
-                  <a
-                    href="#"
-                    className="transition text-white hover:text-primary"
-                  >
-                    {l}
-                  </a>
-                </li>
-              ))}
+              {navLinks.map((l) => {
+                const href = l === "Home" ? "/" : `/${l.toLowerCase()}`;
+                return (
+                  <li key={l}>
+                    <Link
+                      href={href}
+                      className="transition text-white hover:text-primary"
+                    >
+                      {l}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div>
@@ -479,13 +490,8 @@ const TestimonialsAndFooter = () => {
             </h4>
             <ul className="mt-5 space-y-3 text-sm">
               {categories.map((c) => (
-                <li key={c.title}>
-                  <a
-                    href="#"
-                    className="transition text-white hover:text-primary"
-                  >
-                    {c.title}
-                  </a>
+                <li key={c.title} className="text-white">
+                  {c.title}
                 </li>
               ))}
             </ul>

@@ -70,5 +70,5 @@ export function ScrambleText({
     return () => observer.disconnect();
   }, [text, delay, duration, once]);
 
-  return <Tag ref={ref as any} className={className} />;
+  return <Tag ref={ref as React.RefObject<HTMLElement>} className={className} />;
 }

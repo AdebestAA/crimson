@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 type Props = {
   text: string;
@@ -20,8 +20,11 @@ export function Typewriter({
 }: Props) {
   const [displayed, setDisplayed] = useState("");
   const [done, setDone] = useState(false);
+  const initialized = useRef(false);
 
   useEffect(() => {
+    if (initialized.current) return;
+    initialized.current = true;
     setDisplayed("");
     setDone(false);
     let i = 0;

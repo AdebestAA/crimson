@@ -195,7 +195,7 @@ export default function AdminPage() {
                 </tr>
               </thead>
               <tbody>
-                {rows.map((row: any, i) => (
+                {rows.map((row: ContactRow | QuickRow, i) => (
                   <Fragment key={row.id}>
                     <motion.tr
                       key={row.id}

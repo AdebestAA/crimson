@@ -89,7 +89,7 @@ const StatsAndGallery = () => {
             { n: "100%", l: "End-to-End Coordination" },
             { n: "On-Time", l: "Every Time" },
           ].map((s) => (
-            <div key={s.l} className="px-6 py-8 text-center">
+            <div key={s.l} className="px-6 py-8 text-center" data-aos="zoom-in">
               <div className="font-serif text-3xl md:text-4xl">{s.n}</div>
               <div className="mt-1 text-[11px] uppercase tracking-[0.2em] text-white/75">
                 {s.l}
@@ -102,18 +102,11 @@ const StatsAndGallery = () => {
       {/* GALLERY */}
       <section className="bg-background py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center">
-            <span className="text-xs uppercase tracking-[0.3em] text-primary">
-              Gallery
-            </span>
-            <h2 className="mt-3  text-4xl md:text-5xl font-cormorant">
-              Moments We've Made
-              <br />
-              Unforgettable
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl ">
-              A glimpse into the celebrations we've had the honour of bringing
-              to life across Nigeria.
+          <div className="text-center" data-aos="fade-up">
+            <span className="text-xs uppercase tracking-[0.3em] text-primary">Gallery</span>
+            <h2 className="mt-3 text-4xl md:text-5xl font-cormorant" data-aos="fade-up" data-aos-delay="100">Moments We&rsquo;ve Made<br />Unforgettable</h2>
+            <p className="mx-auto mt-4 max-w-xl text-muted-foreground" data-aos="fade-up" data-aos-delay="200">
+              A glimpse into the celebrations we&rsquo;ve had the honour of bringing to life across Nigeria.
             </p>
           </div>
 
@@ -158,7 +151,7 @@ const StatsAndGallery = () => {
           </div>
 
           {/* CTA */}
-          <div className="mt-14 text-center">
+          <div className="mt-14 text-center" data-aos="fade-up">
             <p className="text-sm text-muted-foreground">
               Ready to add your event to our gallery?
             </p>
