@@ -28,7 +28,9 @@ export default function Nav({
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   return (
@@ -73,24 +75,41 @@ export default function Nav({
       </button>
 
       {/* Mobile overlay */}
-      <div className={`fixed inset-0 z-[9999] transition-opacity duration-300 md:hidden ${open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}>
-        <div className="absolute inset-0 bg-black/60" onClick={() => setOpen(false)} />
-        <div className={`absolute right-0 top-0 h-full w-64 bg-background p-6 shadow-xl transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"}`}>
-          <button onClick={() => setOpen(false)} className="mb-8 ml-auto block" aria-label="Close menu">
+      <div
+        className={`fixed inset-0 z-[99999] transition-opacity duration-300 md:hidden ${open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
+      >
+        <div
+          className="absolute inset-0 bg-black/60"
+          onClick={() => setOpen(false)}
+        />
+        <div
+          className={`absolute right-0 top-0 h-full w-64 bg-background p-6 shadow-xl transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"}`}
+        >
+          <button
+            onClick={() => setOpen(false)}
+            className="mb-8 ml-auto block"
+            aria-label="Close menu"
+          >
             <X className="h-6 w-6 text-foreground" />
           </button>
           <ul className="flex flex-col gap-5">
             {links.map((link, i) => (
               <li key={link.label}>
-                <Link href={link.href} onClick={() => setOpen(false)}
-                  className={`block text-lg font-medium transition ${i === activeIndex ? "text-primary" : "text-foreground hover:text-primary"}`}>
+                <Link
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className={`block text-lg font-medium transition ${i === activeIndex ? "text-primary" : "text-foreground hover:text-primary"}`}
+                >
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
-          <Link href={ctaHref} onClick={() => setOpen(false)}
-            className="mt-8 block rounded-full bg-primary px-4 py-2.5 text-center text-sm font-medium text-primary-foreground transition hover:opacity-90">
+          <Link
+            href={ctaHref}
+            onClick={() => setOpen(false)}
+            className="mt-8 block rounded-full bg-primary px-4 py-2.5 text-center text-sm font-medium text-primary-foreground transition hover:opacity-90"
+          >
             {ctaLabel}
           </Link>
         </div>

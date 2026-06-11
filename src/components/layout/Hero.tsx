@@ -54,16 +54,13 @@ export default function Hero({
         }}
       />
 
-      {/* Nav — fixed to top */}
-      <div className="relative z-10">
+      {/* Nav */}
+      <div className="relative">
         <Nav activeIndex={activeNavIndex} />
       </div>
 
-      {/* Hero content — centered in remaining space */}
-      <div
-        className="relative z-10 flex items-center justify-center"
-        style={{ minHeight: "calc(100dvh - 80px)" }}
-      >
+      {/* Hero content */}
+      <div className="relative flex items-center justify-center" style={{ minHeight: "calc(100dvh - 80px)" }}>
         <div className="mx-auto flex max-w-4xl flex-col items-center px-4 py-12 text-center text-white md:px-6 md:py-16">
           {tagline && (
             <span
@@ -117,7 +114,7 @@ export default function Hero({
       </div>
 
       {/* Slide indicators */}
-      <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+      <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2">
         {HERO_IMAGES.map((_, i) => (
           <button
             key={i}
