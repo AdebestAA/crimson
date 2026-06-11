@@ -195,7 +195,7 @@ export function EventPlanningForm() {
                   </FormLabel>
                   <Select onValueChange={field.onChange} value={field.value}>
                     <FormControl>
-                      <SelectTrigger className="h-10 w-full">
+                      <SelectTrigger className="min-h-10 w-full">
                         <SelectValue placeholder="Select event type" />
                       </SelectTrigger>
                     </FormControl>

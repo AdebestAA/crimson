@@ -59,7 +59,7 @@ export function SectionOne() {
 
             <div className="flex items-center justify-center">
               <img
-                src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80"
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=75&fm=webp"
                 alt="Crimson Events team"
                 loading="lazy"
                 className="h-full w-full rounded-2xl object-cover"

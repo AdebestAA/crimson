@@ -7,8 +7,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { FaWhatsapp } from "react-icons/fa";
 import {
-  ChevronLeft, ChevronRight, Loader2, CalendarIcon,
-  Quote, Phone, Mail, MapPin,
+  ChevronLeft,
+  ChevronRight,
+  Loader2,
+  CalendarIcon,
+  Quote,
+  Phone,
+  Mail,
+  MapPin,
 } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
@@ -32,39 +38,43 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 const navLinks = ["Home", "About", "Services", "Contact"];
 const categories = [
   {
     title: "Weddings",
     blurb: "Timeless ceremonies crafted with love and precision.",
-    img: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=75&fm=webp",
   },
   {
     title: "Birthdays",
     blurb: "Memorable celebrations that turn any moment into magic.",
-    img: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=75&fm=webp",
   },
   {
     title: "Baby Showers",
     blurb: "Welcoming new life with warmth and elegance.",
-    img: "https://images.unsplash.com/photo-1530747884674-879d5573f0d9?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1530747884674-879d5573f0d9?auto=format&fit=crop&w=600&q=75&fm=webp",
   },
   {
     title: "Funerals",
     blurb: "Dignified farewells that honor a life well-lived.",
-    img: "https://images.unsplash.com/photo-1528822855841-c1a956dc1bd9?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1528822855841-c1a956dc1bd9?auto=format&fit=crop&w=600&q=75&fm=webp",
   },
   {
     title: "Corporate Events",
     blurb: "Professional gatherings that leave a lasting impression.",
-    img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=75&fm=webp",
   },
   {
     title: "Social Gatherings",
     blurb: "Warm get-togethers full of joy and connection.",
-    img: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=600&q=75&fm=webp",
   },
 ];
 
@@ -198,7 +208,7 @@ function ContactForm() {
                 <FormLabel className={labelClasses}>Event Type</FormLabel>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
-                    <SelectTrigger className="h-10 w-full">
+                    <SelectTrigger className="min-h-10 w-full">
                       <SelectValue placeholder="Select event type" />
                     </SelectTrigger>
                   </FormControl>
@@ -215,27 +225,42 @@ function ContactForm() {
               </FormItem>
             )}
           />
-          <FormField control={form.control} name="eventDate" render={({ field }) => (
+          <FormField
+            control={form.control}
+            name="eventDate"
+            render={({ field }) => (
               <FormItem className="flex flex-col">
                 <FormLabel className={labelClasses}>Event Date</FormLabel>
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
-                      <button type="button" className={cn("flex h-10 w-full items-center justify-between gap-2 rounded-lg border border-input bg-transparent px-3 text-sm transition-colors hover:bg-muted/30", !field.value && "text-muted-foreground")}>
-                        {field.value ? format(new Date(field.value), "PPP") : "Pick a date"}
+                      <button
+                        type="button"
+                        className={cn(
+                          "flex h-10 w-full items-center justify-between gap-2 rounded-lg border border-input bg-transparent px-3 text-sm transition-colors hover:bg-muted/30",
+                          !field.value && "text-muted-foreground",
+                        )}
+                      >
+                        {field.value
+                          ? format(new Date(field.value), "PPP")
+                          : "Pick a date"}
                         <CalendarIcon className="h-4 w-4 shrink-0 text-muted-foreground" />
                       </button>
                     </FormControl>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0" align="start">
-                    <Calendar mode="single" selected={field.value ? new Date(field.value) : undefined}
+                    <Calendar
+                      mode="single"
+                      selected={field.value ? new Date(field.value) : undefined}
                       onSelect={(d) => field.onChange(d ? d.toISOString() : "")}
-                      disabled={{ before: new Date() }} />
+                      disabled={{ before: new Date() }}
+                    />
                   </PopoverContent>
                 </Popover>
                 <FormMessage />
               </FormItem>
-            )} />
+            )}
+          />
           <FormField
             control={form.control}
             name="guestCount"
