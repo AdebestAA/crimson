@@ -60,33 +60,55 @@ export default function Hero({
       </div>
 
       {/* Hero content — centered in remaining space */}
-      <div className="relative z-10 flex items-center justify-center" style={{ minHeight: "calc(100dvh - 80px)" }}>
+      <div
+        className="relative z-10 flex items-center justify-center"
+        style={{ minHeight: "calc(100dvh - 80px)" }}
+      >
         <div className="mx-auto flex max-w-4xl flex-col items-center px-4 py-12 text-center text-white md:px-6 md:py-16">
           {tagline && (
             <span
-              data-aos="fade-down" data-aos-delay="300"
+              data-aos="fade-down"
+              data-aos-delay="300"
               className="mb-4 inline-block rounded-full border border-white/40 px-3 py-1 text-[10px] uppercase tracking-[0.25em] backdrop-blur-sm md:mb-6 md:px-4 md:text-xs"
             >
               {tagline}
             </span>
           )}
 
-          <h1 data-aos="fade-up" data-aos-delay="500" className="font-serif text-4xl leading-tight md:text-5xl lg:text-7xl">
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="500"
+            className="font-serif text-5xl leading-tight md:text-5xl lg:text-7xl"
+          >
             {title}
           </h1>
 
           {description && (
-            <p data-aos="fade-up" data-aos-delay="700" className="mt-4 max-w-xl text-base text-white/80 md:mt-6 md:text-lg">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="700"
+              className="mt-4 max-w-xl text-lg text-white/80 md:mt-6 md:text-lg"
+            >
               {description}
             </p>
           )}
 
           {showCta && (
-            <div data-aos="fade-up" data-aos-delay="900" className="mt-6 flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row sm:justify-center sm:gap-4 md:mt-8">
-              <Link href={ctaPrimaryHref} className="block rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:scale-105 hover:bg-primary-light">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="900"
+              className="mt-6 flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row sm:justify-center sm:gap-4 md:mt-8"
+            >
+              <Link
+                href={ctaPrimaryHref}
+                className="block rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:scale-105 hover:bg-primary-light"
+              >
                 {ctaPrimaryLabel}
               </Link>
-              <Link href={ctaSecondaryHref} className="block rounded-full border border-white/50 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/20">
+              <Link
+                href={ctaSecondaryHref}
+                className="block rounded-full border border-white/50 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/20"
+              >
                 {ctaSecondaryLabel}
               </Link>
             </div>
@@ -97,7 +119,10 @@ export default function Hero({
       {/* Slide indicators */}
       <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
         {HERO_IMAGES.map((_, i) => (
-          <button key={i} onClick={() => setImgIndex(i)} aria-label={`Slide ${i + 1}`}
+          <button
+            key={i}
+            onClick={() => setImgIndex(i)}
+            aria-label={`Slide ${i + 1}`}
             className={`h-1.5 rounded-full transition-all duration-500 ${i === imgIndex ? "w-8 bg-white" : "w-1.5 bg-white/40 hover:bg-white/60"}`}
           />
         ))}

@@ -84,7 +84,7 @@ export function JustAMinModal() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-lg rounded-2xl p-8 sm:p-10">
+      <DialogContent className="lg:max-w-lg w-[90%] mx-auto rounded-2xl lg:p-8 py-4 px-2 sm:p-10">
         <DialogHeader className="items-center text-center">
           <DialogTitle className="font-cormorant text-3xl md:text-4xl">
             Just a min!
@@ -167,7 +167,9 @@ export function JustAMinModal() {
               disabled={isPending}
               className="h-12 w-full rounded-full bg-primary text-base font-semibold text-primary-foreground hover:bg-primary/90"
             >
-              {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin inline" />}
+              {isPending && (
+                <Loader2 className="mr-2 h-4 w-4 animate-spin inline" />
+              )}
               {isPending ? "Submitting..." : "Submit and continue"}
             </Button>
           </form>
