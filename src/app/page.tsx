@@ -136,9 +136,24 @@ export default function Home() {
           </div>
         </section>
 
+        {/* <VideoSection /> */}
         <StatsAndGallery />
         <TestimonialsAndFooter />
       </div>
     </>
   );
 }
+
+// function VideoSection() {
+//   return (
+//     <div className="aspect-video h-60 w-70 overflow-hidden rounded-lg">
+//       <iframe
+//         className="h-full w-full"
+//         src="https://www.youtube.com/embed/7rxOOFvwU60"
+//         title="YouTube video player"
+//         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//         allowFullScreen
+//       />
+//     </div>
+//   );
+// }

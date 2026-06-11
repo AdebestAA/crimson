@@ -150,3 +150,17 @@
     @apply font-sans;
   }
 }
+
+.animate-whatsapp {
+  animation: whatsapp-bounce 2.7s ease-in-out infinite;
+}
+
+@keyframes whatsapp-bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}

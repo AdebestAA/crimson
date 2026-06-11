@@ -12,7 +12,7 @@ export default function AboutPage() {
           </>
         }
         description="Tell us about your event and we'll get back to you within 24 hours with a personalized plan."
-        tagline="About Us"
+        tagline="Reach Out to Us"
         activeNavIndex={3}
         showCta={false}
       />
