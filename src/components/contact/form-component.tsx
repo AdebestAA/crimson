@@ -332,7 +332,7 @@ export function EventPlanningForm() {
           <Button
             type="submit"
             disabled={isPending}
-            className="h-12 w-full rounded-full bg-[oklch(0.45_0.18_25)] text-base font-semibold text-white hover:bg-[oklch(0.40_0.18_25)]"
+            className="h-12 w-full rounded-full bg-primary text-base font-semibold text-primary-foreground hover:bg-primary/90"
           >
             {isPending && (
               <Loader2 className="mr-2 h-4 w-4 animate-spin inline" />
@@ -345,7 +345,7 @@ export function EventPlanningForm() {
               href="https://wa.me/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-[oklch(0.45_0.18_25)] underline-offset-4 hover:underline"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary underline-offset-4 hover:underline"
             >
               Can't wait? Send us a message on WhatsApp
               <FaWhatsapp className="h-4 w-4 text-green-500" />

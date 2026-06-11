@@ -64,7 +64,7 @@ export function JustAMinModal() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (pathname.startsWith("/admin") || pathname.startsWith("/login")) return;
+    if (pathname !== "/") return;
     const done = localStorage.getItem(STORAGE_KEY);
     if (!done) {
       const t = setTimeout(() => setOpen(true), 800);
@@ -165,7 +165,7 @@ export function JustAMinModal() {
             <Button
               type="submit"
               disabled={isPending}
-              className="h-12 w-full rounded-full bg-[oklch(0.45_0.18_25)] text-base font-semibold text-white hover:bg-[oklch(0.40_0.18_25)]"
+              className="h-12 w-full rounded-full bg-primary text-base font-semibold text-primary-foreground hover:bg-primary/90"
             >
               {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin inline" />}
               {isPending ? "Submitting..." : "Submit and continue"}

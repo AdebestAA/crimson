@@ -71,12 +71,12 @@ export default function Hero({
             </span>
           )}
 
-          <h1 data-aos="fade-up" data-aos-delay="500" className="font-serif text-3xl leading-tight md:text-5xl lg:text-7xl">
+          <h1 data-aos="fade-up" data-aos-delay="500" className="font-serif text-4xl leading-tight md:text-5xl lg:text-7xl">
             {title}
           </h1>
 
           {description && (
-            <p data-aos="fade-up" data-aos-delay="700" className="mt-4 max-w-xl text-sm text-white/80 md:mt-6 md:text-lg">
+            <p data-aos="fade-up" data-aos-delay="700" className="mt-4 max-w-xl text-base text-white/80 md:mt-6 md:text-lg">
               {description}
             </p>
           )}

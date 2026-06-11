@@ -128,7 +128,7 @@ export default function ContactPage() {
                   key={title}
                   className="rounded-2xl bg-card p-6  transition-shadow hover:shadow-md"
                 >
-                  <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[oklch(0.45_0.18_25)]/10 text-primary">
+                  <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="text-lg font-semibold font-cormorant tracking-tight">

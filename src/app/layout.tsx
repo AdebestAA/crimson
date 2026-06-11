@@ -3,7 +3,7 @@ import QueryProvider from "@/components/providers/QueryProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Crimson Events",
+  title: "Crimson",
   description: "Premium event planning services",
 };
 
