@@ -40,7 +40,7 @@ const services = [
     ],
     cta: "Plan My Birthday",
     img: "/images/birthday-one.jpg",
-    img2: "/images/birthday-three.jpeg",
+    img2: "/images/birthday-three.avif",
     reverse: true,
   },
   {
