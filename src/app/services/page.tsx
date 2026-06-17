@@ -40,7 +40,7 @@ const services = [
     ],
     cta: "Plan My Birthday",
     img: "/images/birthday-one.jpg",
-    img2: "/images/birthday-two.jpg",
+    img2: "/images/birthday-three.jpeg",
     reverse: true,
   },
   {
@@ -58,8 +58,8 @@ const services = [
       "Catering and refreshment management",
     ],
     cta: "Plan My Baby Shower",
-    img: "/images/baby-shower-one.jpg",
-    img2: "/images/baby-shower-two.jpg",
+    img: "/images/baby-shower-three.jpeg",
+    img2: "/images/baby-shower-four.jpeg",
     reverse: false,
   },
   {
@@ -174,8 +174,19 @@ export default function ServicesPage() {
               <motion.div
                 className={s.reverse ? "md:order-2" : ""}
                 variants={{
-                  hidden: { opacity: 0, rotateY: s.reverse ? 90 : -90, perspective: 1200 },
-                  visible: { opacity: 1, rotateY: 0, transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] } },
+                  hidden: {
+                    opacity: 0,
+                    rotateY: s.reverse ? 90 : -90,
+                    perspective: 1200,
+                  },
+                  visible: {
+                    opacity: 1,
+                    rotateY: 0,
+                    transition: {
+                      duration: 0.8,
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                    },
+                  },
                 }}
               >
                 <div className="relative mx-auto aspect-[4/3] w-full max-w-md">
@@ -203,7 +214,14 @@ export default function ServicesPage() {
                 className={s.reverse ? "md:order-1" : ""}
                 variants={{
                   hidden: { opacity: 0, x: s.reverse ? -60 : 60 },
-                  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] } },
+                  visible: {
+                    opacity: 1,
+                    x: 0,
+                    transition: {
+                      duration: 0.7,
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                    },
+                  },
                 }}
               >
                 <motion.span
@@ -218,7 +236,9 @@ export default function ServicesPage() {
                 <h3 className="mt-3 font-serif font-medium text-3xl md:text-4xl font-cormorant">
                   {s.title}
                 </h3>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  {s.copy}
+                </p>
 
                 <motion.ul
                   className="mt-6 space-y-2.5 text-sm"
@@ -233,7 +253,11 @@ export default function ServicesPage() {
                       className="flex items-start gap-2"
                       variants={{
                         hidden: { opacity: 0, x: -20 },
-                        visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
+                        visible: {
+                          opacity: 1,
+                          x: 0,
+                          transition: { duration: 0.4 },
+                        },
                       }}
                     >
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />

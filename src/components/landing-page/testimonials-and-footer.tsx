@@ -80,23 +80,140 @@ const categories = [
 
 const testimonials = [
   {
-    quote:
-      "Crimson Events turned our wedding into a dream we never thought possible. Every detail was perfect — from the floral arrangements to the final dance. Our guests still talk about it.",
-    name: "Adaeze & Emeka Okonkwo",
-    event: "Wedding, Lagos",
+    quote: `Thank you so much for everything
+Mudi and I are grateful
+Everything came out really perfect....people have been going on and on  about how beautiful the wedding went`,
+    name: "Chinwe & Mudi",
+    event: "Wedding",
     img: "/images/test-one.jpg",
   },
   {
-    quote:
-      "From the first consultation to the last guest leaving, Crimson handled everything flawlessly. Our corporate gala was the talk of the industry for months.",
-    name: "Chidi & Folake Adebayo",
+    quote: `Hello Dami, thank you so much, well done, It was a great success.
+
+Really appreciate your effort`,
+    name: "The Soremekun children",
     event: "Corporate Gala, Abuja",
     img: "/images/test-one.jpg",
   },
   {
-    quote:
-      "I gave them two weeks to plan my daughter's sweet sixteen. They delivered a party so magical she cried happy tears. I'll never use anyone else.",
-    name: "Ngozi Eze",
+    quote: (
+      <>
+        It's such a relief when you have a team that truly has your back so you
+        can actually enjoy your big day.
+        <br />
+        Choosing you “Dami” and the entire CRIMSON EVENTS team was the best
+        decision we made for our wedding. From the very beginning, Dami, you
+        took our vision and turned it into something better than we could have
+        imagined, not minding our wahala😁. Planning a wedding is inherently
+        high pressure, but you handled every complex detail with total command
+        and grace. You are a powerhouse who ensures every vendor is on point and
+        every minute of the timeline is honored.
+        <br />
+        Ten Stars for you beibe!💋🙌🏾
+        <br />
+        My bridal assistant, Victoria, was equally amazing. She was my absolute
+        guardian angel for the day. She was there before I even knew I needed
+        something, keeping me hydrated, fixing my train, and making sure I felt
+        confident. Having her by my side meant I didn't have to worry about a
+        single thing. She was always one step ahead with exactly what I needed,
+        allowing me to stay present and calm throughout the morning, and yeah,
+        she got me a pack of gifts😊
+        <br />
+        If you want a team that is professional, creative, and genuinely cares
+        about your day, look no further!"CRIMSON EVENTS is the right choice👌🏾
+        This team is organized, responsive, and incredibly talented. They didn't
+        just plan a wedding; they protected our peace of mind so we could focus
+        on each other.
+        <br />
+        We really can't thank you enough for your incredible work, and for
+        making our wedding day so special and memorable🙏🏾 May God bless you, for
+        the way you served us on our wedding day. We pray that God grants you
+        continued success in your business. Thank you for being such a vital
+        part of our beginning. Cheers 🥂
+        <br />
+        With love and appreciation, Seyi and Adeola #SAlutetoforever25
+      </>
+    ),
+    name: "Seyi and Adeola",
+    event: "Birthday, Port Harcourt",
+    img: "/images/test-one.jpg",
+  },
+  {
+    quote: `Thank you so much for yesterday Dami, Faith was an amazing assistant. 
+
+I was so pleased.`,
+    name: "Fadekemi and Seun",
+    event: "Birthday, Port Harcourt",
+    img: "/images/test-one.jpg",
+  },
+  {
+    quote: `Hello Dami. Thank you sooooo much. I'll still send a separate appreciation note. I know I stressed you all through this process 😅`,
+    name: "Funmi and Adebayo",
+    event: "Birthday, Port Harcourt",
+    img: "/images/test-one.jpg",
+  },
+  {
+    quote: `Good morning my sis, I'm doing fine. Thank you so much for sending it and thank you so much for a beautiful mixer well put together. Till date everyone can't stop talking about it. All my events na you go dey plan am now, Everything I wan Dey do for Naija now.`,
+    name: "Irene and Chidera's Welcome mixer",
+    event: "Birthday, Port Harcourt",
+    img: "/images/test-one.jpg",
+  },
+  {
+    quote: (
+      <>
+        We reached out to Crimson Events in April, My wife and I wanted a very
+        soft, intimate, and relaxed celebration where our friends and family
+        could simply enjoy the moment without any stress. We knew we needed
+        someone who could truly understand our vision and bring it to life.
+        <br />
+        I remembered attending my brother's wedding (Lateefah & Gideon) and
+        being amazed by how everything came together so beautifully. When it was
+        our turn, we wanted that same magic, and Crimson Events delivered beyond
+        our expectations.
+        <br />
+        From the planning stages to the execution, the team was incredibly
+        resourceful, thoughtful, and attentive to every detail. What stood out
+        the most was their ability to understand us as individuals and as a
+        couple. They didn't just plan an event; they created an experience that
+        reflected who we are.
+        <br />
+        Most importantly, my wife was completely stress-free throughout the
+        entire process, and that meant everything to me. Knowing that we could
+        trust the team to handle everything allowed us to truly enjoy our
+        special day.
+        <br />I would wholeheartedly recommend Crimson Events to anyone looking
+        for an event planner who is professional, intentional, and committed to
+        creating unforgettable experiences.
+      </>
+    ),
+    name: "Chidinma & Joel",
+    event: "Birthday, Port Harcourt",
+    img: "/images/test-one.jpg",
+  },
+  {
+    quote: (
+      <>
+        Oh my goodness, I don't even know where to start! Dami was an amazing
+        planner and did such an incredible job. She was very attentive and
+        literally brought my vision to life. The moment I walked in, all I could
+        say was, 'Oh wow! My goodness! It was everything I had imagined and
+        more.
+        <br />
+        Everyone had something beautiful to say about the event. Dami is so
+        dedicated, and you can truly see the passion she puts into her work. I
+        am so happy and completely fulfilled with how everything turned out.
+        <br />
+        I had watched her work at my friend's Welcome Mixer (Irene & Chidera)
+        and I just knew she was the right person for mine. She listened
+        carefully, understood my thoughts, and executed everything perfectly.
+        She exceeded my expectations in every way.
+        <br />
+        Thank you so much to Dami and the entire team for making my event so
+        special. I truly appreciate all your hard work and dedication. I
+        definitely look forward to working with you again for future events.
+      </>
+    ),
+    name: "Mashii",
     event: "Birthday, Port Harcourt",
     img: "/images/test-one.jpg",
   },
@@ -363,24 +480,27 @@ const TestimonialsAndFooter = () => {
                 fade ? "opacity-100" : "opacity-0"
               }`}
             >
-              <div className="flex items-start text-base leading-relaxed text-white/90 gap-x-4">
-                <span className="shrink-0 text-white/40">
-                  <Quote className="h-10 w-10" />
-                </span>
-                <p className="pt-2  text-center">{t.quote}</p>
+              <div className="lg:flex items-start text-base leading-relaxed text-white/90 gap-x-4">
+                <p className="flex items-center justify-center">
+                  {" "}
+                  <span className="shrink-0 text-white/40">
+                    <Quote className="h-10 w-10" />
+                  </span>
+                </p>
+                <p className="pt-2  text-center w-full">{t.quote}</p>
               </div>
 
               <div className="mt-8 flex items-center justify-center gap-3">
-                <img
+                {/* <img
                   src={t.img}
                   alt={t.name}
                   className="h-10 w-10 rounded-full object-cover"
-                />
+                /> */}
                 <div className="text-left">
-                  <div className="text-sm font-medium">{t.name}</div>
-                  <div className="text-[11px] text-white/60">
+                  <div className="text-sm font-bold uppercase">{t.name}</div>
+                  {/* <div className="text-[11px] text-white/60">
                     Featured at {t.event}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -21,12 +21,12 @@ const categories = [
   {
     title: "Baby Showers",
     blurb: "Welcoming new life with warmth and elegance.",
-    img: "/images/baby-shower.jpg",
+    img: "/images/baby-shower-two.jpeg",
   },
   {
     title: "Funerals",
     blurb: "Dignified farewells that honor a life well-lived.",
-    img: "/images/funerals.jpg",
+    img: "/images/funeral-two.avif",
   },
   {
     title: "Corporate Events",
@@ -36,7 +36,7 @@ const categories = [
   {
     title: "Social Gatherings",
     blurb: "Warm get-togethers full of joy and connection.",
-    img: "/images/social-gathering.jpg",
+    img: "/images/social-gathering.avif",
   },
 ];
 
@@ -104,7 +104,7 @@ export default function Home() {
                       src={c.img}
                       alt={c.title}
                       loading="lazy"
-                      className="h-full w-full object-cover"
+                      className={` h-full w-full ${c.title === "Birthdays" ? "object-cover" : "object-cover"}`}
                       whileHover={{ scale: 1.08 }}
                       transition={{ duration: 0.5 }}
                     />

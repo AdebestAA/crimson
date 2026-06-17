@@ -16,14 +16,14 @@ const galleryItems: GalleryItem[] = [
     alt: "Wedding couple",
     aspect: "aspect-[3/4]",
   },
-  { type: "video", link: "" },
+  { type: "video", link: "https://www.youtube.com/embed/r5pGiuuhZdY" },
   {
     type: "image",
     src: "/images/image-one.jpg",
     alt: "Event catering",
     aspect: "aspect-square",
   },
-  { type: "video", link: "" },
+  { type: "video", link: "https://www.youtube.com/embed/8de8vwUM19o" },
   {
     type: "image",
     src: "/images/image-three.jpg",
@@ -36,14 +36,14 @@ const galleryItems: GalleryItem[] = [
     alt: "Birthday party",
     aspect: "aspect-square",
   },
-  { type: "video", link: "" },
+  { type: "video", link: "https://www.youtube.com/embed/MT6e1b8heHo" },
   {
     type: "image",
     src: "/images/image-five.jpg",
     alt: "Traditional attire",
     aspect: "aspect-[3/4]",
   },
-  { type: "video", link: "" },
+  { type: "video", link: "https://www.youtube.com/embed/hUPo9ddBteo" },
 ];
 
 const filters = ["All", "Images", "Short clips"];
@@ -68,7 +68,7 @@ const StatsAndGallery = () => {
       <section className="bg-primary text-primary-foreground font-cormorant">
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-white/20 md:grid-cols-4">
           {[
-            { n: "500+", l: "Events Planned" },
+            { n: "30+", l: "Events Planned" },
             { n: "10+", l: "Cities Covered" },
             { n: "100%", l: "End-to-End Coordination" },
             { n: "On-Time", l: "Every Time" },
@@ -141,7 +141,7 @@ const StatsAndGallery = () => {
                       />
                     ) : (
                       <div className="masonry-item w-full rounded-lg overflow-hidden aspect-video">
-                        <VideoComponent />
+                        <VideoComponent link={item.link} />
                       </div>
                     )}
                   </div>
