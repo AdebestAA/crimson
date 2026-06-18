@@ -115,7 +115,7 @@ const services = [
       "Day-of coordination",
     ],
     cta: "Plan My Corporate Event",
-    img: "/images/social-one.jpg",
+    img: "/images/social-gathering.avif",
     img2: "/images/social-two.jpg",
     reverse: true,
   },

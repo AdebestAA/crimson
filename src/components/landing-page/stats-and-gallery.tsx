@@ -16,34 +16,34 @@ const galleryItems: GalleryItem[] = [
     alt: "Wedding couple",
     aspect: "aspect-[3/4]",
   },
-  { type: "video", link: "https://www.youtube.com/embed/r5pGiuuhZdY" },
+  { type: "video", link: "https://www.youtube.com/embed/MT6e1b8heHo" },
   {
     type: "image",
     src: "/images/image-one.jpg",
     alt: "Event catering",
     aspect: "aspect-square",
   },
-  { type: "video", link: "https://www.youtube.com/embed/8de8vwUM19o" },
+  { type: "video", link: "https://www.youtube.com/embed/hUPo9ddBteo" },
   {
     type: "image",
     src: "/images/image-three.jpg",
     alt: "Celebration",
     aspect: "aspect-[4/5]",
   },
+  { type: "video", link: "https://www.youtube.com/embed/r5pGiuuhZdY" },
   {
     type: "image",
     src: "/images/image-four.jpg",
     alt: "Birthday party",
     aspect: "aspect-square",
   },
-  { type: "video", link: "https://www.youtube.com/embed/MT6e1b8heHo" },
   {
     type: "image",
     src: "/images/image-five.jpg",
     alt: "Traditional attire",
     aspect: "aspect-[3/4]",
   },
-  { type: "video", link: "https://www.youtube.com/embed/hUPo9ddBteo" },
+  { type: "video", link: "https://www.youtube.com/embed/8de8vwUM19o" },
 ];
 
 const filters = ["All", "Images", "Short clips"];

@@ -571,7 +571,7 @@ const TestimonialsAndFooter = () => {
                   <span className="grid h-7 w-7 place-items-center rounded-full bg-primary/10 text-primary">
                     <Mail className="h-3.5 w-3.5" />
                   </span>
-                  crimsonevents@gmail.com
+                  ce.luxeexperience@gmail.com
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="grid h-7 w-7 place-items-center rounded-full bg-primary/10 text-primary">
