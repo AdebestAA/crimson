@@ -17,19 +17,23 @@ const galleryItems: GalleryItem[] = [
     aspect: "aspect-[3/4]",
   },
   { type: "video", link: "https://www.youtube.com/embed/MT6e1b8heHo" },
+  { type: "video", link: "https://www.youtube.com/embed/YA9UgLyfoPQ" },
   {
     type: "image",
     src: "/images/image-one.jpg",
     alt: "Event catering",
     aspect: "aspect-square",
   },
-  { type: "video", link: "https://www.youtube.com/embed/hUPo9ddBteo" },
+  { type: "video", link: "https://www.youtube.com/embed/q-OZqUpyEoE" },
+  { type: "video", link: "https://www.youtube.com/embed/L6p9nGrLbOA" },
   {
     type: "image",
     src: "/images/image-three.jpg",
     alt: "Celebration",
     aspect: "aspect-[4/5]",
   },
+  { type: "video", link: "https://www.youtube.com/embed/xZfIvhlLYyY" },
+  { type: "video", link: "https://www.youtube.com/embed/Xbcb2-vaSQo" },
   { type: "video", link: "https://www.youtube.com/embed/r5pGiuuhZdY" },
   {
     type: "image",
@@ -37,12 +41,15 @@ const galleryItems: GalleryItem[] = [
     alt: "Birthday party",
     aspect: "aspect-square",
   },
+  { type: "video", link: "https://www.youtube.com/embed/OCYOto3RzXM" },
+  { type: "video", link: "https://www.youtube.com/embed/1OHusrswQZg" },
   {
     type: "image",
     src: "/images/image-five.jpg",
     alt: "Traditional attire",
     aspect: "aspect-[3/4]",
   },
+  { type: "video", link: "https://www.youtube.com/embed/hUPo9ddBteo" },
   { type: "video", link: "https://www.youtube.com/embed/8de8vwUM19o" },
 ];
 
