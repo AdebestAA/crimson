@@ -6,8 +6,9 @@ import Link from "next/link";
 import Nav from "@/components/layout/Nav";
 
 const HERO_IMAGES = [
-  "/images/hero-one.jpg",
-  "/images/hero-two.jpg",
+  "/images/hero-one.avif",
+  "/images/hero-two.avif",
+  "/images/hero-three.avif",
 
   // "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=75&fm=webp",
 ];

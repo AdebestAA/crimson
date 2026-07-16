@@ -19,14 +19,14 @@ const categories = [
     img: "/images/birthdays.jpg",
   },
   {
-    title: "Baby Showers",
+    title: "Bridal Showers",
     blurb: "Welcoming new life with warmth and elegance.",
-    img: "/images/baby-shower-two.jpeg",
+    img: "/images/bridal-shower.png",
   },
   {
     title: "Funerals",
     blurb: "Dignified farewells that honor a life well-lived.",
-    img: "/images/funeral-two.avif",
+    img: "/images/fun-two.jpg",
   },
   {
     title: "Corporate Events",

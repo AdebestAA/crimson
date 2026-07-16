@@ -44,7 +44,7 @@ const services = [
     reverse: true,
   },
   {
-    tag: "BABY SHOWERS",
+    tag: "BRIDAL SHOWERS",
     title: "Baby Showers Planning Done Right",
     copy: "Welcoming a new life into the world is one of the most beautiful moments a family can share. We create warm, intimate baby shower experiences that celebrate the mother and the miracle of new beginnings.",
     bullets: [
@@ -58,8 +58,8 @@ const services = [
       "Catering and refreshment management",
     ],
     cta: "Plan My Baby Shower",
-    img: "/images/baby-shower-three.jpeg",
-    img2: "/images/baby-shower-four.jpeg",
+    img: "/images/bridal-shower-two.png",
+    img2: "/images/bridal-shower.png",
     reverse: false,
   },
   {
@@ -77,8 +77,8 @@ const services = [
       "Liaison with religious and cultural leaders",
     ],
     cta: "Speak With us Quitely",
-    img: "/images/funerals.jpg",
-    img2: "/images/funeral-two.jpg",
+    img: "/images/fun-one.avif",
+    img2: "/images/fun-two.jpg",
     reverse: true,
   },
   {
