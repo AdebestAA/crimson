@@ -7,7 +7,7 @@ import "./stats-and-gallery.css";
 
 type GalleryItem =
   | { type: "image"; src: string; alt: string; aspect: string }
-  | { type: "video"; link: string };
+  | { type: "video"; link: string; videoType?: "youtube" | "mp4" };
 
 const galleryItems: GalleryItem[] = [
   {
@@ -16,15 +16,25 @@ const galleryItems: GalleryItem[] = [
     alt: "Wedding couple",
     aspect: "aspect-[3/4]",
   },
-  { type: "video", link: "https://www.youtube.com/embed/MT6e1b8heHo" },
-  { type: "video", link: "https://www.youtube.com/embed/YA9UgLyfoPQ" },
+  {
+    type: "video",
+    link: "https://pub-53461864fd004d57ae83c51c9705e60e.r2.dev/Bayo%20%26%20Groomsmen.mp4",
+    videoType: "mp4",
+  },
+  {
+    type: "video",
+    link: "https://pub-53461864fd004d57ae83c51c9705e60e.r2.dev/Alhaja%20Soremekun%20Funeral%20decoration.mp4",
+  },
   {
     type: "image",
     src: "/images/image-one.jpg",
     alt: "Event catering",
     aspect: "aspect-square",
   },
-  { type: "video", link: "https://www.youtube.com/embed/q-OZqUpyEoE" },
+  {
+    type: "video",
+    link: "https://pub-53461864fd004d57ae83c51c9705e60e.r2.dev/Lateefah%20%26%20Gideon%20afterparty.mp4",
+  },
   { type: "video", link: "https://www.youtube.com/embed/L6p9nGrLbOA" },
   {
     type: "image",
@@ -148,7 +158,10 @@ const StatsAndGallery = () => {
                       />
                     ) : (
                       <div className="masonry-item w-full rounded-lg overflow-hidden aspect-video">
-                        <VideoComponent link={item.link} />
+                        <VideoComponent
+                          link={item.link}
+                          type={item.videoType}
+                        />
                       </div>
                     )}
                   </div>
