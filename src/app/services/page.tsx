@@ -58,8 +58,8 @@ const services = [
       "Catering and refreshment management",
     ],
     cta: "Plan My Baby Shower",
-    img: "/images/bridal-shower-two.png",
-    img2: "/images/bridal-shower.png",
+    img: "/images/bridal-shower-two.jpg",
+    img2: "/images/bridal-shower.jpg",
     reverse: false,
   },
   {

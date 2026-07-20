@@ -21,7 +21,7 @@ const categories = [
   {
     title: "Bridal Showers",
     blurb: "Welcoming new life with warmth and elegance.",
-    img: "/images/bridal-shower.png",
+    img: "/images/bridal-shower.jpg",
   },
   {
     title: "Funerals",
