@@ -3,7 +3,7 @@ import QueryProvider from "@/components/providers/QueryProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Crimson",
+  title: "Crimson Events",
   description: "Premium event planning services",
   icons: {
     icon: [
@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://res.cloudinary.com/dojnilu5l/image/upload/v1784998391/crimson-logo_zwiwi0.png",
+        width: 1200,
+        height: 630,
+        alt: "Crimson Logo",
       },
     ],
     type: "website",
