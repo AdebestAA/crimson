@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://www.crimsonevents.ng/",
     images: [
       {
-        url: "https://res.cloudinary.com/dojnilu5l/image/upload/v1784998391/crimson-logo_zwiwi0.png",
+        url: "https://res.cloudinary.com/dojnilu5l/image/upload/v1785000727/crimson-logo_1_spjsdq.png",
         width: 1200,
         height: 630,
         alt: "Crimson Logo",
