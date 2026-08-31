@@ -10,32 +10,38 @@ import { JustAMinModal } from "@/components/modals/just-a-min-modal";
 const categories = [
   {
     title: "Weddings",
-    blurb: "Timeless ceremonies crafted with love and precision.",
+    blurb:
+      "Bespoke events designed to bring your vision to life with elegance, precision, and unforgettable moments.",
     img: "/images/wedding.jpg",
   },
   {
     title: "Birthdays",
-    blurb: "Memorable celebrations that turn any moment into magic.",
+    blurb:
+      "From intimate dinners to milestone celebrations, we create unforgettable birthday experiences tailored to your vision.",
     img: "/images/birthdays.jpg",
   },
   {
     title: "Bridal Showers",
-    blurb: "Welcoming new life with warmth and elegance.",
+    blurb:
+      "Elegant bridal showers thoughtfully planned to celebrate love, friendship, and the journey to forever.",
     img: "/images/bridal-shower.jpg",
   },
   {
     title: "Funerals",
-    blurb: "Dignified farewells that honor a life well-lived.",
+    blurb:
+      "Dignified farewell ceremonies, thoughtfully planned and seamlessly executed to honour every life with elegance and respect.",
     img: "/images/fun-two.jpg",
   },
   {
     title: "Corporate Events",
-    blurb: "Professional gatherings that leave a lasting impression.",
+    blurb:
+      "Seamlessly executed corporate events that inspire, connect, and elevate your brand.",
     img: "/images/corperate-events.jpg",
   },
   {
     title: "Social Gatherings",
-    blurb: "Warm get-togethers full of joy and connection.",
+    blurb:
+      "From anniversaries to private celebrations, we create sophisticated experiences tailored to every special occasion.",
     img: "/images/social-gathering.avif",
   },
 ];
@@ -48,17 +54,17 @@ export default function Home() {
         <Hero
           title={
             <>
-              Every Moment Deserves
+              <span className="text-3xl lg:text-5xl"> Every Celebration</span>,
               <br />
-              to be{" "}
-              <span className="relative inline-block">
-                Unforgettable
+              <span className="text-3xl lg:text-5xl"> Perfectly Planned</span>,
+              <span className="relative inline-block text-3xl lg:text-5xl">
+                Beautifully Remembered
                 <span className="absolute inset-x-0 -bottom-1 h-[3px] bg-primary" />
               </span>
               .
             </>
           }
-          description="From intimate gatherings to grand celebrations — we craft experiences that live in hearts forever."
+          description="From intimate gatherings to grand celebrations, we curate seamless, luxury experiences that leave lasting impressions"
           tagline="NIGERIA'S PREMIER EVENT PLANNERS"
         />
 
@@ -74,16 +80,17 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                Events We Bring to Life
+                Every Celebration, Expertly Executed
               </h2>
               <p
                 className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                Every event type deserves its own magic. We specialize in six
-                categories — each handled with the same obsessive attention to
-                detail.
+                Every celebration is unique, and so is our approach. From
+                intimate gatherings to grand occasions, we deliver bespoke
+                planning, seamless coordination, and exceptional execution
+                tailored to every event.
               </p>
             </div>
 
@@ -118,9 +125,9 @@ export default function Home() {
                     </p>
                     <Link
                       href="/services"
-                      className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary transition group-hover:gap-2"
+                      className="mt-7 inline-flex items-center gap-1 text-sm font-medium text-primary transition group-hover:gap-2"
                     >
-                      Learn more{" "}
+                      Discover more{" "}
                       <motion.span
                         animate={{ x: [0, 5, 0] }}
                         transition={{ repeat: Infinity, duration: 1.2 }}

@@ -7,17 +7,19 @@ import Footer from "@/components/layout/Footer";
 const services = [
   {
     tag: "Weddings",
-    title: "Weddings Planning Done Right",
-    copy: "Your wedding day is the most important day of your life — and we treat it that way. From traditional ceremonies to white weddings and receptions, we handle every detail so you can be present and rest.",
+    title: "Wedding Planning, Perfectly Executed",
+    copy: "Your wedding deserves more than a beautiful celebration, it deserves an effortless planning experience. Whether you are planning a traditional ceremony, a white wedding, or a grand reception, we manage every detail with care, precision, and professionalism, so you can be fully present and enjoy every unforgettable moment.",
     bullets: [
-      "Full venue scouting and decoration",
-      "Traditional and white wedding coordination",
-      "Catering management and menu curation",
+      "Venue sourcing and selection",
+      "Budget planning and management",
+      "Vendor sourcing, coordination, and negotiation",
+      "Wedding design consultation and mood board creation",
+      "Catering coordination and menu planning",
       "Photography and videography coordination",
-      "Bridal party logistics and scheduling",
-      "Live entertainment and DJ management",
+      "Bridal party coordination and scheduling",
       "Guest management and RSVP tracking",
-      "Day-of coordination and timeline management",
+      "Entertainment and production coordination",
+      "Detailed timeline creation and event-day coordination",
     ],
     cta: "Plan My Wedding",
     img: "/images/wedding-event-service-two.jpg",
@@ -26,36 +28,39 @@ const services = [
   },
   {
     tag: "Birthdays",
-    title: "Birthdays Planning Done Right",
-    copy: "Whether it's a child's first birthday, a sweet sixteen, or a landmark 50th — we create birthday celebrations that feel personal, joyful, and utterly unforgettable. From age reveals to live magic.",
+    title: "Birthday Celebrations, Thoughtfully Planned",
+    copy: "Every birthday marks a milestone worth celebrating. Whether it's a child's first birthday, a Sweet 16, an 18th, a 21st, a milestone 40th or 50th, or an intimate private celebration, we design experiences that are personal, joyful, and beautifully executed from start to finish.",
     bullets: [
-      "Theme conceptualization and design",
-      "Venue selection and decoration",
-      "Custom-tiered and dessert table coordination",
+      "Theme development and event concept creation",
+      "Venue sourcing and selection",
+      "Vendor sourcing, coordination, and negotiation",
+      "Event styling consultation and mood board creation",
+      "Catering and beverage coordination",
       "Entertainment and activity planning",
-      "Invitation design and guest management",
-      "Photography and photo-booth setup",
-      "Catering and beverage management",
-      "Surprise element planning",
+      "Invitation management and guest RSVP coordination",
+      "Photography, videography, and photo booth coordination",
+      "Detailed event timeline and on-the-day coordination",
+      "Surprise planning and special moment execution",
     ],
-    cta: "Plan My Birthday",
+    cta: "Plan My Birthday Celebration",
     img: "/images/birthday-one.jpg",
     img2: "/images/birthday-three.avif",
     reverse: true,
   },
   {
     tag: "BRIDAL SHOWERS",
-    title: "Baby Showers Planning Done Right",
-    copy: "Welcoming a new life into the world is one of the most beautiful moments a family can share. We create warm, intimate baby shower experiences that celebrate the mother and the miracle of new beginnings.",
+    title: "Bridal Showers, Thoughtfully Planned",
+    copy: "Celebrate the bride-to-be with an elegant and memorable gathering designed to honor this special season. From intimate brunches to sophisticated soirées, we plan bridal showers that are stylish, personal, and effortlessly executed.",
     bullets: [
-      "Soft, elegant theme design and styling",
-      "Venue decoration with floral arrangements",
-      "Custom dessert table and cake coordination",
-      "Gender reveal planning (if desired)",
-      "Games and activity facilitation",
-      "Gift registry coordination",
-      "Photography and memory book setup",
-      "Catering and refreshment management",
+      "Theme development and event concept creation",
+      "Venue sourcing and selection",
+      "Event styling consultation and mood board creation",
+      "Vendor sourcing, coordination, and negotiation",
+      "Catering and beverage coordination",
+      "Entertainment, games, and activity planning",
+      "Guest invitation and RSVP management",
+      "Photography and videography coordination",
+      "Detailed event timeline and on-the-day coordination",
     ],
     cta: "Plan My Baby Shower",
     img: "/images/bridal-shower-two.jpg",
@@ -63,36 +68,41 @@ const services = [
     reverse: false,
   },
   {
-    tag: "FUNERAL SERVICES",
+    tag: "FUNERAL & MEMORIAL SERVICES",
     title: "A Dignified Farewell",
-    copy: "Grief is sacred. When you've lost someone dear, the last thing you should worry about is logistics. We handle every arrangement with the utmost care, sensitivity, and respect - so your family can focus on remembering and healing.",
+    copy: "Saying goodbye to a loved one is never easy. During such a difficult time, families deserve the space to grieve, reflect, and honour a life well lived. We provide thoughtful planning and seamless coordination with compassion, discretion, and the utmost respect, ensuring every detail is handled with care.",
     bullets: [
-      "Venue sourcing and dignified setup",
+      "Venue sourcing and coordination",
+      "Memorial service planning and logistics",
       "Order of service design and printing",
-      "Floral arrangements and tribute dispalys",
-      "Catering for post-service gatherings",
-      "Transportation and logistics coordination",
-      "Photography and memory preservation",
-      "Guest management and seating",
-      "Liaison with religious and cultural leaders",
+      "Vendor sourcing and coordination",
+      "Tribute coordination",
+      "Transportation and guest logistics",
+      "Catering coordination for reception or post-service gatherings",
+      "Guest management and seating coordination",
+      "Liaison with religious, cultural, and family representatives",
+      "Detailed event timeline and on-the-day coordination",
     ],
-    cta: "Speak With us Quitely",
+    cta: "Speak With Us Privately",
     img: "/images/fun-one.avif",
     img2: "/images/fun-two.jpg",
     reverse: true,
   },
   {
     tag: "CORPORATE EVENTS",
-    title: "Corporate Events Planning Done Right",
-    copy: "Your brand deserves and event that reflects its excellence. From product launches and annual galas, to conferences and team retreats, we deliver corporate events that impress clients, inspire teams, and elevate your brand.",
+    title: "Corporate Events, Seamlessly Executed",
+    copy: "Every corporate event is an opportunity to strengthen your brand, engage your audience, and create meaningful connections. From product launches and conferences to annual galas, award ceremonies, executive retreats, and company celebrations, we deliver professionally planned experiences that leave a lasting impression.",
     bullets: [
-      "Event concept and brand alignment",
-      "Venue sourcing and AV setup",
-      "Speaker and MC coordination",
-      "Branded decor and signage",
-      "Catering and hospitality management",
-      "Guest registration and badge management",
-      "Photograohy and media coverage",
+      "Event strategy and brand alignment",
+      "Venue sourcing and selection",
+      "Vendor sourcing, coordination, and negotiation",
+      "Audio-visual and production coordination",
+      "Speaker, MC, and entertainment coordination",
+      "Event branding and signage coordination",
+      "Guest registration and attendee management",
+      "Catering and hospitality coordination",
+      "Photography and videography coordination",
+      "Detailed event timeline and on-site event management",
       "Post-event reporting and feedback",
     ],
     cta: "Plan My Corporate Event",
@@ -102,19 +112,21 @@ const services = [
   },
   {
     tag: "SOCIAL GATHERINGS",
-    title: "Social Gatherings Planning Done Right",
-    copy: "Life's best moments happen when people come together. Reunions, house warmings, cultural festivals, dinner parties - we bring the same premium touch to every social occasion, big or small.",
+    title: "Social Gatherings, Thoughtfully Planned",
+    copy: "Every gathering is an opportunity to celebrate life's special moments and create lasting memories. Whether it's a reunion, housewarming, cultural celebration, dinner party, or private soirée, we curate stylish, seamless experiences tailored to your vision and your guests.",
     bullets: [
-      "Event theme and concept development",
-      "Venue decoration and ambiance design",
-      "Catering and bar management",
-      "Entertainment and music curation",
-      "Invitation and RSVP management",
-      "Photography and social media content",
-      "Activity and game planning",
-      "Day-of coordination",
+      "Event concept development and planning",
+      "Venue sourcing and selection",
+      "Vendor sourcing, coordination, and negotiation",
+      "Event styling consultation and mood board creation",
+      "Catering and beverage coordination",
+      "Entertainment and music coordination",
+      "Guest invitation and RSVP management",
+      "Photography and videography coordination",
+      "Activity and programme planning",
+      "Detailed event timeline and on-the-day coordination",
     ],
-    cta: "Plan My Corporate Event",
+    cta: "Plan My Social Event",
     img: "/images/social-gathering.avif",
     img2: "/images/social-two.jpg",
     reverse: true,
@@ -127,10 +139,10 @@ export default function ServicesPage() {
       <Hero
         title={
           <>
-            Our <span className="text-primary">Services</span>
+            Thoughtfully Curated <span className="text-primary">Services</span>
           </>
         }
-        description="From weddings to corporate galas — we bring every celebration to life with precision, creativity, and care."
+        description="We offer comprehensive event planning services designed to create seamless, sophisticated, and unforgettable celebrations."
         tagline="What We Offer"
         activeNavIndex={2}
         showCta={false}
@@ -148,12 +160,14 @@ export default function ServicesPage() {
             Why We Exist
           </span>
           <h2 className="mt-3 font-serif text-4xl md:text-5xl font-cormorant">
-            Events We Bring to Life
+            Celebrations We Bring to Life
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Every event type deserves its own magic. We specialize in six
-            categories — each handled with the same obsessive attention to
-            detail.
+            Every celebration tells a unique story, and every story deserves
+            thoughtful planning. From intimate gatherings to grand celebrations,
+            we create seamless, beautifully executed events across six distinct
+            categories, each tailored to your vision and delivered with
+            precision, creativity, and exceptional attention to detail.
           </p>
         </motion.div>
 

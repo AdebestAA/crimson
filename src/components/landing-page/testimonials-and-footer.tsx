@@ -467,10 +467,10 @@ const TestimonialsAndFooter = () => {
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="mx-auto px-6 text-center">
           <span className="text-[11px] uppercase tracking-[0.3em] text-white/70">
-            What Our Clients Say
+            Our Clients' Stories
           </span>
           <h2 className="mt-3  text-4xl md:text-5xl font-cormorant">
-            Stories That Warm Our Hearts
+            Celebrations Worth Talking About
           </h2>
 
           {/* Testimonial Slide */}
@@ -548,31 +548,54 @@ const TestimonialsAndFooter = () => {
           <div className="grid gap-12 md:grid-cols-2">
             <div>
               <span className="text-xs uppercase   text-primary font-semibold">
-                Get in Touch
+                GET IN TOUCH
               </span>
               <h2 className="mt-2  text-3xl  md:text-4xl font-cormorant">
-                Lets Start Planning
+                Let's Create Something
                 <br />
-                Your Event
+                Extraordinary Together.
               </h2>
               <p className="mt-2 max-w-md text-sm text-muted-foreground">
-                Share a few details and our team will reach out within 24 hours
-                to begin crafting your perfect event. No commitment required —
-                just a conversation.
+                We love to hear about your event. Complete the form below, and a
+                member of our team will contact you within 24 hours to begin
+                creating an unforgettable experience tailored just for you.
               </p>
               <ul className="mt-2 space-y-4 text-sm">
-                <li className="flex items-center gap-3">
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-primary/10 text-primary">
-                    <Phone className="h-3.5 w-3.5" />
-                  </span>
-                  +234 801 351 0005
+                <li>
+                  <a
+                    href="tel:+2348025153042"
+                    className="flex items-center gap-3 hover:text-primary transition-colors"
+                  >
+                    <span className="grid h-7 w-7 place-items-center rounded-full bg-primary/10 text-primary">
+                      <Phone className="h-3.5 w-3.5" />
+                    </span>
+                    +2348025153042
+                  </a>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-primary/10 text-primary">
-                    <Mail className="h-3.5 w-3.5" />
-                  </span>
-                  ce.luxeexperience@gmail.com
+                <li>
+                  <a
+                    href="tel:+2349112670005"
+                    className="flex items-center gap-3 hover:text-primary transition-colors"
+                  >
+                    <span className="grid h-7 w-7 place-items-center rounded-full bg-primary/10 text-primary">
+                      <Phone className="h-3.5 w-3.5" />
+                    </span>
+                    +2349112670005
+                  </a>
                 </li>
+
+                <li>
+                  <a
+                    href="mailto:crimsoneventsng@gmail.com"
+                    className="flex items-center gap-3 hover:text-primary transition-colors"
+                  >
+                    <span className="grid h-7 w-7 place-items-center rounded-full bg-primary/10 text-primary">
+                      <Mail className="h-3.5 w-3.5" />
+                    </span>
+                    crimsoneventsng@gmail.com
+                  </a>
+                </li>
+
                 <li className="flex items-center gap-3">
                   <span className="grid h-7 w-7 place-items-center rounded-full bg-primary/10 text-primary">
                     <MapPin className="h-3.5 w-3.5" />

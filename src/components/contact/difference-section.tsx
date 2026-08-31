@@ -2,29 +2,34 @@ import { Button } from "@/components/ui/button";
 
 const reasons = [
   {
-    title: "Cultural Authenticity",
+    title: "Bespoke Planning",
     description:
-      "We do not just plan events — we honour traditions. Our team is fluent in the customs, protocols, and nuances of Nigerian celebrations.",
+      "No two celebrations are the same. Every event is thoughtfully designed around your vision, style, and story.",
   },
   {
-    title: "Premium Vendor Network",
+    title: "Trusted Industry Partners",
     description:
-      "Years of relationships with Nigeria's top caterers, decorators, photographers, and entertainers mean better quality and better rates for you.",
+      "Our carefully curated network of premium vendors ensures exceptional quality, reliability, and seamless execution at every stage.",
   },
   {
-    title: "Transparent Pricing",
+    title: "Flawless Execution",
     description:
-      "No hidden fees, no surprise charges. Every naira is accounted for, and every decision is made with your budget in mind.",
+      "From the first consultation to the final farewell, we manage every detail with precision, allowing you to enjoy your celebration without the stress.",
   },
   {
-    title: "Stress-Free Experience",
+    title: "Exceptional Guest Experience",
     description:
-      "We handle the logistics, the drama, and the deadlines. You show up, look stunning, and enjoy every moment.",
+      "Every touchpoint is intentionally planned to create memorable moments that leave a lasting impression on you and your guests.",
   },
   {
-    title: "On-Time, Every Time",
+    title: "Clear Communication",
     description:
-      "Nigerian time? Not on our watch. We run tight schedules so that your events start and end exactly as planned.",
+      "You are aware of what's happening. We provide timely updates, proactive guidance, and complete transparency throughout the planning process.",
+  },
+  {
+    title: "Excellence Without Compromise",
+    description:
+      "We do not settle for ordinary. Every detail is carefully considered to deliver a celebration that exceeds expectations.",
   },
 ];
 
@@ -54,12 +59,12 @@ export function DifferenceSection() {
               Why choose us
             </p>
             <h2 className="text-3xl font-medium font-cormorant leading-tight tracking-tight md:text-5xl">
-              The Difference Is in the Details
+              Why Clients Trust Crimson Events
             </h2>
             <p className="mt-4 text-muted-foreground">
-              In a market full of planners, we stand apart because we treat your
-              event as if it were our own. Here is what sets us apart when you
-              partner with Crimson Events.
+              Every celebration is personal, and so is our approach. We combine
+              thoughtful planning, trusted partnerships, and flawless execution
+              to create events that feel effortless, elegant, and unforgettable.
             </p>
 
             <ol className="mt-8 space-y-6">
@@ -101,14 +106,14 @@ export function DifferenceSection() {
       <div className="bg-muted/40">
         <div className="mx-auto max-w-3xl px-4 py-16 text-center md:py-24">
           <h2 className="text-3xl font-medium tracking-tight md:text-5xl font-cormorant ">
-            Let's Create Something
+            Your Dream Celebration
             <br />
-            Unforgettable Together
+            Starts Here
           </h2>
           <p className="mx-auto mt-4 max-w-xl font-dm-sans">
-            Every great event starts with a conversation. Tell us your vision,
-            and we will bring it to life with the care, creativity, and cultural
-            pride that defines Crimson Events.
+            Every celebration deserves thoughtful planning and flawless
+            execution. Share your vision with us, and together, let's create an
+            experience that's elegant, meaningful, and truly unforgettable.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button
@@ -116,7 +121,7 @@ export function DifferenceSection() {
               className="rounded-full bg-primary text-white hover:bg-primary"
               asChild
             >
-              <a href="#plan">Start Planning Your Event</a>
+              <a href="#plan">SBook a Consultation</a>
             </Button>
             <Button
               size="lg"

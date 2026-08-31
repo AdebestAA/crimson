@@ -38,7 +38,7 @@ export default function Hero({
   showCta = true,
   ctaPrimaryLabel = "Start Planning",
   ctaPrimaryHref = "/contact",
-  ctaSecondaryLabel = "See Our Work",
+  ctaSecondaryLabel = "View Our Portfolio",
   ctaSecondaryHref = "/services",
 }: HeroProps) {
   const [imgIndex, setImgIndex] = useState(0);
@@ -85,7 +85,7 @@ export default function Hero({
           <h1
             data-aos="fade-up"
             data-aos-delay="500"
-            className="font-serif text-5xl leading-tight md:text-5xl lg:text-7xl"
+            className="font-serif text-4xl leading-tight md:text-5xl lg:text-6xl"
           >
             {title}
           </h1>

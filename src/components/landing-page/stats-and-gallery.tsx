@@ -173,7 +173,7 @@ const StatsAndGallery = () => {
           {/* CTA */}
           <div className="mt-14 text-center" data-aos="fade-up">
             <p className="text-sm text-muted-foreground">
-              Ready to add your event to our gallery?
+              Ready to create unforgettable memories?
             </p>
             <Link
               href="/contact"

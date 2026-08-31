@@ -15,37 +15,61 @@ const services = [
     icon: CalendarCheck,
     title: "Full Event Planning & Coordination",
     description:
-      "End-to-end management of your event, from conception to execution.",
+      "From concept to the final farewell, we oversee every detail to ensure your celebration unfolds seamlessly, allowing you to enjoy every moment with complete peace of mind.",
   },
   {
     icon: Lightbulb,
-    title: "Concept Development & Mood-board Curation",
+    title: "Concept Development & Mood Board Curation",
     description:
-      "Translating your ideas into a bold visual direction that reflects your style.",
+      "We transform your ideas into a cohesive design concept, curating bespoke mood boards that beautifully reflect your style, personality, and vision.",
   },
   {
     icon: MapPin,
     title: "Venue Sourcing",
     description:
-      "Access to premium venues across Lagos, Abuja, Port Harcourt, and beyond — negotiated to your brief.",
+      "We source exceptional venues that complement your vision, negotiating the best options to suit your style, guest experience, and budget.",
   },
   {
     icon: Users,
     title: "Vendor Curation",
     description:
-      "We hand-pick and manage the best caterers, photographers, DJs, and entertainers in the industry.",
+      "We carefully select and coordinate trusted industry professionals, ensuring every vendor aligns with your vision and delivers excellence from start to finish.",
   },
   {
     icon: ClipboardList,
     title: "Day-of Coordination",
     description:
-      "Structured, scheduled, and managed timelines to guarantee a seamless flow on the day.",
+      "Relax and be fully present while we manage every timeline, vendor, and behind-the-scenes detail, ensuring your event runs flawlessly from beginning to end.",
   },
   {
     icon: Sparkles,
-    title: "Guest Experience",
+    title: "Guest Experience & Logistics",
     description:
-      "RSVP management, guest hospitality, transportation, and personalized touches for every attendee.",
+      "From guest arrivals to seating arrangements and event flow, we thoughtfully coordinate every touchpoint for a seamless experience.",
+  },
+  {
+    icon: Sparkles,
+    title: "Budget Planning & Management",
+    description:
+      "Thoughtful budget planning that maximizes value without compromising on elegance, quality, or your overall vision.",
+  },
+  {
+    icon: Sparkles,
+    title: "Guest Experience & Logistics",
+    description:
+      "From guest arrivals to seating arrangements and event flow, we thoughtfully coordinate every touchpoint for a seamless experience.",
+  },
+  {
+    icon: Sparkles,
+    title: "Production & Event Styling Oversight",
+    description:
+      "We oversee every design element and production detail, ensuring your celebration is beautifully executed exactly as envisioned.",
+  },
+  {
+    icon: Sparkles,
+    title: "Timeline & Logistics Management",
+    description:
+      "A carefully planned schedule that keeps every moment flowing effortlessly, from setup through the final send-off.",
   },
 ];
 
@@ -53,9 +77,14 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Hero
-        title={<>Built on Passion, Rooted in Culture</>}
+        title={
+          <>
+            Because every unforgettable celebration begins with thoughtful
+            planning
+          </>
+        }
         description=""
-        tagline="OUR STORY"
+        tagline="WHERE EXTRAORDINARY CELEBRATIONS BEGIN"
         activeNavIndex={1}
         showCta={false}
       />
@@ -69,29 +98,26 @@ export default function ContactPage() {
                 Who we are
               </p>
               <h2 className="text-3xl font-semibold font-cormorant leading-tight tracking-tight md:text-5xl">
-                More Than Planners —<br />
-                We Are Memory Makers
+                Creating Timeless Celebrations, <br /> One Story at a Time
               </h2>
               <div className="mt-6 space-y-4 text-sm ">
                 <p>
-                  At Crimson Dress, we believe the most unforgettable moments
-                  deserve more than a checklist — they demand intention, beauty,
-                  and a touch of magic. We are the minds behind celebrations
-                  that feel effortless, rich, stunning, and lasting impressions.
+                  At Crimson Events, we believe every celebration tells a story
+                  worth remembering. With a passion for thoughtful planning and
+                  refined execution, we transform ideas into extraordinary
+                  experiences that are as beautiful as they are meaningful.
                 </p>
                 <p>
-                  We take your ideas, your style, and your story, then transform
-                  them into superior cues that tell truly one of a kind. From
-                  bare spaces to breathtaking settings, every detail is
-                  carefully curated to create an atmosphere your guests will
-                  talk about long after the event is over.
+                  Whether it's an intimate gathering, a lavish wedding, or a
+                  corporate affair, we oversee every detail with precision,
+                  creativity, and care. From the first consultation to the final
+                  farewell, we ensure every moment flows seamlessly, allowing
+                  you to be fully present while we bring your vision to life.
                 </p>
                 <p>
-                  Whether you are a simple, secret-keeping deeply about a story,
-                  moments are woven. We don't just plan events, we craft
-                  memories under climate and bring elegance to life in a way
-                  that feels seamless, personal, and unforgettable. At Crimson
-                  Events, your special moments are our masterpiece.
+                  Because at Crimson Events, we don't just plan events, we
+                  create experiences that linger in hearts long after the last
+                  guest has gone.
                 </p>
               </div>
             </div>

@@ -11,7 +11,7 @@ const navLinks = [
 const services = [
   "Weddings",
   "Birthdays",
-  "Baby Showers",
+  "Bridal shower",
   "Funerals",
   "Corporate Events",
   "Social Gatherings",
@@ -32,7 +32,7 @@ export default function Footer() {
             />
           </div>
           <p className="mt-4 max-w-xs text-sm italic">
-            "Planning memories, one event at a time."
+            "Thoughtfully planned. Beautifully executed."
           </p>
           <div className="mt-6 flex gap-3">
             {["IG", "F", "X"].map((s) => (
@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
         <div>
           <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#989898]">
-            Navigation
+            Explore
           </h4>
           <ul className="mt-5 space-y-3 text-sm">
             {navLinks.map((l) => (
@@ -65,7 +65,7 @@ export default function Footer() {
         </div>
         <div>
           <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#989898]">
-            Services
+            Celebrations we plan
           </h4>
           <ul className="mt-5 space-y-3 text-sm">
             {services.map((s) => (
@@ -81,7 +81,10 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Crimson Events.
           <br /> All rights reserved.
         </p>
-        <p>Lagos, Nigeria &middot; info@crimsonevents.ng &middot; +234 801 351 0005</p>
+        <p>
+          Lagos, Nigeria &middot; info@crimsonevents.ng &middot; +234 801 351
+          0005
+        </p>
       </div>
     </footer>
   );
