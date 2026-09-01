@@ -43,6 +43,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import Footer from "../layout/Footer";
 
 const navLinks = ["Home", "About", "Services", "Contact"];
 const categories = [
@@ -610,7 +611,7 @@ const TestimonialsAndFooter = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-neutral-900 py-16 text-neutral-400">
+      {/* <footer className="bg-neutral-900 py-16 text-neutral-400">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2">
@@ -672,7 +673,8 @@ const TestimonialsAndFooter = () => {
           </p>
           <p>Lagos, Nigeria · info@crimsonevents.ng · +234 801 351 0005</p>
         </div>
-      </footer>
+      </footer> */}
+      <Footer />
     </>
   );
 };
