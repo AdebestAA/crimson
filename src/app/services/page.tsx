@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Hero from "@/components/layout/Hero";
 import Footer from "@/components/layout/Footer";
+import { useRouter } from "next/navigation";
 
 const services = [
   {
@@ -134,6 +135,7 @@ const services = [
 ];
 
 export default function ServicesPage() {
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Hero
@@ -281,7 +283,8 @@ export default function ServicesPage() {
                 </motion.ul>
 
                 <motion.button
-                  className="mt-7 rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+                  onClick={() => router.push("/contact")}
+                  className="mt-7 rounded-full bg-primary cursor-pointer px-6 py-2.5 text-sm font-medium text-primary-foreground transition hover:opacity-90"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.97 }}
                 >

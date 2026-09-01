@@ -118,17 +118,21 @@ export function DifferenceSection() {
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button
               size="lg"
-              className="rounded-full bg-primary text-white hover:bg-primary"
+              className="rounded-full cursor-pointer bg-primary text-white hover:bg-primary"
               asChild
             >
-              <a href="#plan">SBook a Consultation</a>
+              <a href="/contact" className="cursor-pointer">
+                Book a Consultation
+              </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="rounded-full border-primary text-primary hover:bg-black/10 hover:text-primary"
+              className="rounded-full cursor-pointer border-primary text-primary hover:bg-black/10 hover:text-primary"
             >
-              Explore Our Services
+              <a href="/services" className="cursor-pointer">
+                Explore Our Services
+              </a>
             </Button>
           </div>
         </div>
